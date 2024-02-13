@@ -1,4 +1,4 @@
-import UserUseCase from "../../../application/user";
+import UserUseCase from "../../../application/user.js";
 import BaseMiddleware from "./base.js";
 import { UnauthorizedError } from "../../../entities/error.js";
 

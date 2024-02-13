@@ -1,5 +1,5 @@
-import User, { UserValidator as UserValidatorInterface } from "../../entities/user";
-import Base from "./base";
+import User, { UserValidator as UserValidatorInterface } from "../../entities/user.js";
+import Base from "./base.js";
 import { ValidationError } from "../../entities/error.js";
 
 export default class UserValidator extends UserValidatorInterface {

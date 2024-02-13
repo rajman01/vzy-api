@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 const env = dotenv.config({ path: `./.env` });
 
-// Set the NODE_ENV to 'development' by default..
+// Set the NODE_ENV to 'development' by default  ,
 process.env.NODE_ENV = process.env.NODE_ENV || "dev";
 
 if (env.error && !process.env.NODE_ENV.toLowerCase().includes("prod")) {

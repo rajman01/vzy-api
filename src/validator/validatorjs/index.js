@@ -1,5 +1,5 @@
 import Base from "./base.js";
-import UserValidator from "./user";
+import UserValidator from "./user.js";
 
 export default class ValidatorJS {
     constructor() {

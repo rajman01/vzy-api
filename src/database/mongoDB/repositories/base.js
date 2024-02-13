@@ -1,4 +1,4 @@
-import { convertToObjectId } from "../utils.js";
+import { convertToObjectId, parseQuery } from "../utils.js";
 
 export default class Base {
     constructor(model) {
@@ -11,7 +11,7 @@ export default class Base {
     }
 
     async findOne(query = {}, { select = "" } = {}) {
-        const res = await this.Model.findOne(query).select(select);
+        const res = await this.Model.findOne(parseQuery(query)).select(select);
         return res ? res.toObject({ virtuals: true }) : null;
     }
 
@@ -21,7 +21,7 @@ export default class Base {
 
     async findOneAndUpdate(query = {}, data) {
         const res = await this.Model.findOneAndUpdate(
-            query,
+            parseQuery(query),
             {
                 $set: data,
             },

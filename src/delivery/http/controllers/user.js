@@ -15,7 +15,7 @@ export default class UserController extends BaseController {
     async register(req, res) {
         try {
             const user = await this.userUseCase.create(req.body);
-            this.handleSuccess(res, user, "User created");
+            this.handleSuccess(res, { user }, "User created");
         } catch (e) {
             this.handleError(res, e);
         }

@@ -23,7 +23,9 @@ export default class UserUseCase {
 
         data.password = await this.authService.hashPassword(data.password);
 
-        return this.userRepo.create(data);
+        const user = await this.userRepo.create(data);
+        delete user.password;
+        return user;
     }
 
     async login(data) {
