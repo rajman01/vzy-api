@@ -27,6 +27,7 @@
         "winston": "^3.11.0"
     },
     "devDependencies": {
+        "@flydotio/dockerfile": "^0.5.2",
         "prettier": "^2.1.2",
         "prettier-eslint": "^13.0.0"
     }

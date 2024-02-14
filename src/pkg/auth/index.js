@@ -22,7 +22,6 @@ export default class AuthService {
     async generateToken(payload, time = 60) {
         return jwt.sign({ data: payload }, this.config.jwtSecret, {
             expiresIn: time,
-            algorithm: "ES256",
         });
     }
 }
