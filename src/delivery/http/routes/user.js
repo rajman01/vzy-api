@@ -11,4 +11,5 @@ export default (app, dependencies) => {
     router.post("/register", controller.register.bind(controller));
     router.post("/login", controller.login.bind(controller));
     router.put("/update", authMiddleware.authenticate.bind(authMiddleware), controller.update.bind(controller));
+    router.get("/payment/initiate", authMiddleware.authenticate.bind(authMiddleware), controller.initiatePayment.bind(controller));
 };

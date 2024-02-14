@@ -15,8 +15,13 @@ export const parsePemKey = key => {
 export const port = parseInt(process.env.PORT, 10) || 3000;
 export const jwtSecret = parsePemKey(process.env.JWT_SECRET);
 export const mongodbURI = process.env.MONGO_URI;
+export const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+export const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
 export default {
     port,
     jwtSecret,
     mongodbURI,
+    stripeSecretKey,
+    stripeWebhookSecret,
 };

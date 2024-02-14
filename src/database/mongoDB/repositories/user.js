@@ -17,11 +17,6 @@ export default class UserRepo extends UserRepoInterface {
         return user ? new User(user) : null;
     }
 
-    async findById(id, opts) {
-        const user = await this.base.findById(id, opts || {});
-        return user ? new User(user) : null;
-    }
-
     async findOneAndUpdate(filter, update) {
         const user = await this.base.findOneAndUpdate(filter, update);
         return user ? new User(user) : null;

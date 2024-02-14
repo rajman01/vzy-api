@@ -3,6 +3,7 @@ import logger from "../pkg/logger/index.js";
 import ValidatorJS from "../validator/validatorjs/index.js";
 import config from "./env.js";
 import AuthService from "../pkg/auth/index.js";
+import StripePaymentService from "../pkg/stripe/payment.js";
 
 export default (() => {
     return {
@@ -10,5 +11,6 @@ export default (() => {
         databaseService: new MongoDB({ logger, config }),
         validatorService: new ValidatorJS(),
         authService: new AuthService({ config }),
+        paymentService: new StripePaymentService({ config })
     };
 })();

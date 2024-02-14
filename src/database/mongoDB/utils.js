@@ -10,7 +10,7 @@ export const convertToObjectId = id => {
     }
 };
 
-export const parseQuery = (query) => {
+export const parseQuery = query => {
     if (query.id !== undefined) {
         query._id = convertToObjectId(query.id);
         delete query.id;

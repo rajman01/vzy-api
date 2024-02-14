@@ -69,11 +69,7 @@ export class UserRepo {
         return Promise.reject(new Error("not implemented"));
     }
 
-    async findById(id, opts) {
-        return Promise.reject(new Error("not implemented"));
-    }
-
-    async findOneAndUpdate(filter, update, opts) {
+    async findOneAndUpdate(filter, update) {
         return Promise.reject(new Error("not implemented"));
     }
 }

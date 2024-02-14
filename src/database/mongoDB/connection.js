@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import UserRepo from "./repositories/user.js";
+import PaymentRepo from "./repositories/payment.js";
 mongoose.set("strictQuery", false);
 
 export default class MongoDB {
     constructor({ logger, config }) {
         this.userRepo = new UserRepo();
+        this.paymentRepo = new PaymentRepo();
         this.logger = logger;
         this.config = config;
     }
